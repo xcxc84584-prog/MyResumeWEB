@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件庫 | ResumeSystem</title>
+    <link rel="stylesheet" href="/static/css/style.css?v=5">
+</head>
+<body>
+    <header>
+        <h1>ResumeSystem</h1>
+        <p>文件庫</p>
+    </header>
+    <main>
+        <section>
+            <h2>上傳文件</h2>
+            <form id="documentForm">
+                <div>
+                    <label for="documentFile">選擇文件 *</label>
+                    <input
+                        type="file"
+                        id="documentFile"
+                        name="documentFile"
+                        accept=".pdf,.jpg,.jpeg,.png,.webp,.zip"
+                        required
+                    >
+                </div>
+                <p>支援 PDF、JPG、PNG、WebP、ZIP，單一文件最大 10 MB。</p>
+                <button type="submit" id="uploadButton">上傳文件</button>
+            </form>
+            <p id="message"></p>
+        </section>
+        <section>
+            <h2>我的文件</h2>
+            <div class="table-container">
+                <table class="data-grid document-grid">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>文件名稱</th>
+                            <th>類型</th>
+                            <th>大小</th>
+                            <th>上傳時間</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="documentList">
+                        <tr>
+                            <td colspan="6">正在讀取文件資料...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <p>
+            <a href="/dashboard">返回使用者中心</a>
+        </p>
+    </main>
+    <script src="/static/js/documents.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提交履歷 | ResumeSystem</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ResumeSystem</h1>
+        <p>提交履歷</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>搜尋公司</h2>
+
+            <div>
+                <label for="companyNameInput">公司名稱</label>
+                <input
+                    type="text"
+                    id="companyNameInput"
+                    maxlength="200"
+                    placeholder="輸入公司名稱"
+                >
+            </div>
+
+            <div>
+                <label for="descriptionInput">描述</label>
+                <input
+                    type="text"
+                    id="descriptionInput"
+                    maxlength="500"
+                    placeholder="可選，用於進一步篩選"
+                >
+            </div>
+
+            <button id="searchCompanyButton" type="button">
+                搜尋
+            </button>
+        </section>
+
+        <section>
+            <h2>搜尋結果</h2>
+
+            <div class="table-container">
+                <table class="data-grid">
+                    <thead>
+                        <tr>
+                            <th>公司名稱</th>
+                            <th>描述</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="companyTableBody">
+                        <tr>
+                            <td colspan="3">
+                                請先搜尋公司
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>已提交履歷</h2>
+
+            <div class="table-container">
+                <table class="data-grid">
+                    <thead>
+                        <tr>
+                            <th>公司名稱</th>
+                            <th>描述</th>
+                            <th>狀態</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="submissionTableBody">
+                        <tr>
+                            <td colspan="4">
+                                尚無已提交履歷
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <button
+                type="button"
+                onclick="window.location.href='/dashboard'"
+            >
+                返回 Dashboard
+            </button>
+        </section>
+
+        <p id="message"></p>
+    </main>
+
+    <script src="/static/js/submit-resume.js"></script>
+</body>
+</html>

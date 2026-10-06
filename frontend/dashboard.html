@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用者中心 | ResumeSystem</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ResumeSystem</h1>
+        <p>使用者中心</p>
+    </header>
+
+    <main>
+        <section>
+            <h2 id="welcomeMessage">載入中...</h2>
+            <p id="userEmail"></p>
+        </section>
+
+        <section>
+            <h2>我的履歷</h2>
+
+            <ul>
+                <li>
+                    <a href="/profile">基本資料</a>
+                </li>
+                <li>
+                    <a href="/skills">技能與證照</a>
+                </li>
+                <li>
+                    <a href="/documents">進入文件庫</a>
+                </li>
+                <li>
+                    <a href="/resume">查看履歷</a>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>查閱模式</h2>
+
+            <p>
+                狀態：
+                <strong id="reviewModeStatus">載入中...</strong>
+            </p>
+
+            <p id="reviewModeDescription">
+                正在取得查閱模式狀態...
+            </p>
+
+            <div id="reviewModeActions">
+                <button
+                    id="enterReviewButton"
+                    type="button"
+                    hidden
+                >
+                    進入查閱模式
+                </button>
+
+                <button
+                    id="viewResumeButton"
+                    type="button"
+                    hidden
+                >
+                    查看履歷
+                </button>
+
+                <button
+                    type="button"
+                    onclick="window.location.href='/submit-resume'"
+                >
+                    提交履歷
+                </button>
+
+                <button
+                    id="exitReviewButton"
+                    type="button"
+                    hidden
+                >
+                    退出查閱模式
+                </button>
+            </div>
+
+            <div
+                id="reviewPasswordPanel"
+                hidden
+            >
+                <p id="reviewPasswordTitle"></p>
+
+                <input
+                    id="reviewPasswordInput"
+                    type="password"
+                    placeholder="請輸入帳戶密碼"
+                    autocomplete="current-password"
+                >
+
+                <button
+                    id="confirmReviewButton"
+                    type="button"
+                >
+                    確認
+                </button>
+
+                <button
+                    id="cancelReviewButton"
+                    type="button"
+                >
+                    取消
+                </button>
+
+                <p id="reviewMessage"></p>
+            </div>
+        </section>
+
+        <section>
+            <button id="logoutButton">登出</button>
+        </section>
+    <section class="account-deletion" data-account-kind="user">
+            <h2>註銷一般帳號</h2>
+            <p>永久刪除帳號、基本資料、技能、證照、頭像、附件及所有投遞紀錄。此操作無法復原。</p>
+            <form id="deleteAccountForm">
+                <label for="deleteAccountPassword">目前帳號密碼</label>
+                <input id="deleteAccountPassword" type="password" autocomplete="current-password" required>
+                <label for="deleteAccountConfirmation">輸入「註銷」以確認</label>
+                <input id="deleteAccountConfirmation" type="text" autocomplete="off" required pattern="註銷">
+                <button id="deleteAccountButton" type="submit">永久註銷帳號</button>
+                <p id="deleteAccountMessage" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="/static/js/dashboard.js"></script>
+    <script src="/static/js/account-deletion.js"></script>
+</body>
+</html>

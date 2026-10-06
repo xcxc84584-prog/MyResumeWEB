@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>批閱模式 | ResumeSystem</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ResumeSystem</h1>
+        <p>批閱模式</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>公司批閱帳號</h2>
+            <p>登入既有批閱帳號，或建立新的批閱帳號。</p>
+        </section>
+
+        <section>
+            <button
+                id="reviewerLoginButton"
+                type="button"
+                onclick="window.location.href='/reviewer/login'"
+            >
+                登入批閱帳號
+            </button>
+
+            <button
+                id="reviewerRegisterButton"
+                type="button"
+                onclick="window.location.href='/reviewer/register'"
+            >
+                註冊批閱帳號
+            </button>
+        </section>
+
+        <section>
+            <a href="/">返回首頁</a>
+        </section>
+    </main>
+
+    <script src="/static/js/reviewer.js"></script>
+</body>
+</html>

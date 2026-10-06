@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本資料 | ResumeSystem</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ResumeSystem</h1>
+        <p>基本資料</p>
+    </header>
+
+    <main>
+        <form id="profileForm">
+            <section>
+                <h2>個人基本資料</h2>
+
+                <div>
+                    <label for="avatar">大頭貼</label>
+
+                    <div>
+                        <img
+                            id="avatarPreview"
+                            alt="大頭貼預覽"
+                            width="150"
+                            height="150"
+                            hidden
+                        >
+                    </div>
+
+                    <input
+                        type="file"
+                        id="avatar"
+                        name="avatar"
+                        accept="image/png,image/jpeg,image/webp"
+                    >
+
+                    <button
+                        type="button"
+                        id="uploadAvatarButton"
+                    >
+                        上傳大頭貼
+                    </button>
+
+                    <p id="avatarMessage"></p>
+                </div>
+
+                <div>
+                    <label for="fullName">姓名 *</label>
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        maxlength="100"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="gender">性別</label>
+                    <select id="gender" name="gender">
+                        <option value="">請選擇</option>
+                        <option value="male">男</option>
+                        <option value="female">女</option>
+                        <option value="other">其他</option>
+                        <option value="prefer_not_to_say">不透露</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="maritalStatus">婚姻狀態</label>
+                    <select id="maritalStatus" name="maritalStatus">
+                        <option value="">請選擇</option>
+                        <option value="single">未婚</option>
+                        <option value="married">已婚</option>
+                        <option value="other">其他</option>
+                        <option value="prefer_not_to_say">不透露</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="birthDate">出生日期</label>
+                    <input
+                        type="date"
+                        id="birthDate"
+                        name="birthDate"
+                    >
+                </div>
+
+                <div>
+                    <label>年齡</label>
+                    <span id="age">—</span>
+                </div>
+
+                <div>
+                    <label for="heightCm">身高</label>
+                    <input
+                        type="number"
+                        id="heightCm"
+                        name="heightCm"
+                        min="1"
+                        max="300"
+                        step="0.1"
+                    >
+                    <span>cm</span>
+                </div>
+
+                <div>
+                    <label for="weightKg">體重</label>
+                    <input
+                        type="number"
+                        id="weightKg"
+                        name="weightKg"
+                        min="1"
+                        max="500"
+                        step="0.1"
+                    >
+                    <span>kg</span>
+                </div>
+
+                <div>
+                    <label for="bloodType">血型</label>
+                    <select id="bloodType" name="bloodType">
+                        <option value="">請選擇</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>
+                        <option value="O">O</option>
+                        <option value="unknown">不知道</option>
+                        <option value="prefer_not_to_say">不透露</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="phone">電話</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        maxlength="30"
+                    >
+                </div>
+
+                <div>
+                    <label for="address">居住地址</label>
+                    <input
+                        type="text"
+                        id="address"
+                        name="address"
+                        maxlength="500"
+                    >
+                </div>
+
+                <div>
+                    <label for="educationLevel">最高學歷</label>
+                    <select
+                        id="educationLevel"
+                        name="educationLevel"
+                    >
+                        <option value="">請選擇</option>
+                        <option value="high_school">高中</option>
+                        <option value="vocational_school">高職</option>
+                        <option value="associate">專科</option>
+                        <option value="bachelor">學士</option>
+                        <option value="master">碩士</option>
+                        <option value="doctorate">博士</option>
+                        <option value="other">其他</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="medicalHistory">疾病歷史</label>
+                    <textarea
+                        id="medicalHistory"
+                        name="medicalHistory"
+                        rows="5"
+                    ></textarea>
+                    <p>
+                        選填，此資料預設不作為公開履歷內容。
+                    </p>
+                </div>
+            </section>
+
+            <button type="submit">
+                儲存基本資料
+            </button>
+        </form>
+
+        <p id="message"></p>
+
+        <p>
+            <a href="/dashboard">返回使用者中心</a>
+        </p>
+    </main>
+
+    <script src="/static/js/profile.js"></script>
+</body>
+</html>

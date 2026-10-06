@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>批閱中心 | ResumeSystem</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ResumeSystem</h1>
+        <p>公司履歷批閱中心</p>
+    </header>
+
+    <main>
+        <section>
+            <h2 id="companyName">載入中...</h2>
+            <p id="companyDescription"></p>
+        </section>
+
+        <section>
+            <h2>收到的履歷</h2>
+
+            <div class="table-container">
+                <table class="data-grid reviewer-submission-grid">
+                    <thead>
+                        <tr>
+                            <th>序列號</th>
+                            <th>履歷</th>
+                            <th>狀態</th>
+                        </tr>
+                    </thead>
+                    <tbody id="submissionTableBody">
+                        <tr>
+                            <td colspan="3">尚無履歷</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <button id="logoutButton">登出批閱帳號</button>
+        </section>
+
+        <p id="message"></p>
+    <section class="account-deletion" data-account-kind="reviewer">
+            <h2>註銷批閱帳號</h2>
+            <p>永久刪除批閱帳號、收到的投遞紀錄與批閱狀態；申請者的帳號及原始履歷仍會保留。此操作無法復原。</p>
+            <form id="deleteAccountForm">
+                <label for="deleteAccountPassword">目前帳號密碼</label>
+                <input id="deleteAccountPassword" type="password" autocomplete="current-password" required>
+                <label for="deleteAccountConfirmation">輸入「註銷」以確認</label>
+                <input id="deleteAccountConfirmation" type="text" autocomplete="off" required pattern="註銷">
+                <button id="deleteAccountButton" type="submit">永久註銷帳號</button>
+                <p id="deleteAccountMessage" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="/static/js/reviewer-dashboard.js"></script>
+    <script src="/static/js/account-deletion.js"></script>
+</body>
+</html>

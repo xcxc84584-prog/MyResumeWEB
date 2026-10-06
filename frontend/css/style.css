@@ -1,0 +1,723 @@
+/* =========================
+   Global
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   Header
+   ========================= */
+
+header {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid #cccccc;
+}
+
+header h1 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+header p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   Main
+   ========================= */
+
+main {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   Forms
+   ========================= */
+
+form {
+    max-width: 100%;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    max-width: 100%;
+    padding: 8px;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    max-width: 500px;
+}
+
+input[type="file"] {
+    max-width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* =========================
+   Buttons
+   ========================= */
+
+button {
+    max-width: 100%;
+    padding: 10px 20px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   Links
+   ========================= */
+
+a {
+    color: #0000ee;
+}
+
+
+/* =========================
+   Messages
+   ========================= */
+
+#message,
+#avatarMessage,
+#certificateMessage {
+    margin-top: 10px;
+}
+
+
+/* =========================
+   Avatar
+   ========================= */
+
+#avatarPreview {
+    max-width: 100%;
+    object-fit: cover;
+    border: 1px solid #000000;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   Table Container
+   ========================= */
+
+.table-container {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+/* =========================
+   Common Data Grid
+   ========================= */
+
+.data-grid {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-top: 10px;
+    border: 1px solid #000000;
+}
+
+.data-grid th,
+.data-grid td {
+    border: 1px solid #000000;
+    padding: 6px 4px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.3;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    white-space: normal;
+}
+
+.data-grid th {
+    font-weight: bold;
+}
+
+.data-grid tbody tr {
+    min-height: 40px;
+}
+
+.data-grid button {
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 6px;
+    margin: 2px;
+}
+
+
+/* =========================
+   Skill Grid
+   5 columns = 100%
+   ========================= */
+
+.skill-grid {
+    font-size: 13px;
+}
+
+.skill-grid th:nth-child(1),
+.skill-grid td:nth-child(1) {
+    width: 25%;
+}
+
+.skill-grid th:nth-child(2),
+.skill-grid td:nth-child(2) {
+    width: 20%;
+}
+
+.skill-grid th:nth-child(3),
+.skill-grid td:nth-child(3) {
+    width: 20%;
+}
+
+.skill-grid th:nth-child(4),
+.skill-grid td:nth-child(4) {
+    width: 20%;
+}
+
+.skill-grid th:nth-child(5),
+.skill-grid td:nth-child(5) {
+    width: 15%;
+}
+
+
+/* =========================
+   Certificate Grid
+   7 columns = 100%
+   ========================= */
+
+.certificate-grid {
+    font-size: 13px;
+}
+
+.certificate-grid th:nth-child(1),
+.certificate-grid td:nth-child(1) {
+    width: 18%;
+}
+
+.certificate-grid th:nth-child(2),
+.certificate-grid td:nth-child(2) {
+    width: 15%;
+}
+
+.certificate-grid th:nth-child(3),
+.certificate-grid td:nth-child(3) {
+    width: 12%;
+}
+
+.certificate-grid th:nth-child(4),
+.certificate-grid td:nth-child(4) {
+    width: 12%;
+}
+
+.certificate-grid th:nth-child(5),
+.certificate-grid td:nth-child(5) {
+    width: 15%;
+}
+
+.certificate-grid th:nth-child(6),
+.certificate-grid td:nth-child(6) {
+    width: 13%;
+}
+
+.certificate-grid th:nth-child(7),
+.certificate-grid td:nth-child(7) {
+    width: 15%;
+}
+
+
+/* =========================
+   Document Grid
+   6 columns = 100%
+   ========================= */
+
+.document-grid {
+    width: 100%;
+    max-width: 100%;
+    font-size: 13px;
+}
+
+.document-grid th:nth-child(1),
+.document-grid td:nth-child(1) {
+    width: 6%;
+}
+
+.document-grid th:nth-child(2),
+.document-grid td:nth-child(2) {
+    width: 25%;
+}
+
+.document-grid th:nth-child(3),
+.document-grid td:nth-child(3) {
+    width: 12%;
+}
+
+.document-grid th:nth-child(4),
+.document-grid td:nth-child(4) {
+    width: 12%;
+}
+
+.document-grid th:nth-child(5),
+.document-grid td:nth-child(5) {
+    width: 25%;
+}
+
+.document-grid th:nth-child(6),
+.document-grid td:nth-child(6) {
+    width: 20%;
+}
+
+
+/* =========================
+   Document Grid Content
+   ========================= */
+
+.document-grid td:nth-child(2) {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+}
+
+.document-grid td:nth-child(5) {
+    font-size: 12px;
+}
+
+.document-grid td:nth-child(6) {
+    white-space: normal;
+}
+
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .data-grid {
+        font-size: 12px;
+    }
+
+    .data-grid th,
+    .data-grid td {
+        padding: 5px 3px;
+    }
+
+    .data-grid button {
+        display: block;
+        width: 100%;
+        margin: 3px 0;
+        padding: 5px 3px;
+    }
+
+    .document-grid td:nth-child(5) {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================
+   Small Screen
+   ========================= */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="date"],
+    select,
+    textarea {
+        max-width: 100%;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .data-grid {
+        font-size: 11px;
+    }
+
+    .data-grid th,
+    .data-grid td {
+        padding: 4px 2px;
+    }
+}
+/* =========================
+   Proof Documents
+   ========================= */
+
+.proof-document {
+    width: 100%;
+    padding: 4px 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+.proof-document:last-child {
+    border-bottom: none;
+}
+
+.proof-document span {
+    display: block;
+    margin-bottom: 4px;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+}
+
+.proof-document button {
+    font-size: 11px;
+    padding: 3px 5px;
+    margin: 2px;
+}
+
+.proof-document-empty {
+    padding: 5px 0;
+}
+
+.link-document-button {
+    display: block;
+    width: 100%;
+    margin-top: 5px !important;
+    padding: 5px !important;
+    font-size: 11px !important;
+}
+.proof-document {
+    width: 100%;
+    padding: 4px 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+.proof-document span {
+    display: block;
+    margin-bottom: 4px;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+}
+
+.proof-document button {
+    font-size: 11px;
+    padding: 3px 5px;
+    margin: 2px;
+}
+
+.proof-document-empty {
+    padding: 5px 0;
+}
+
+.link-document-button {
+    display: block;
+    width: 100%;
+    margin-top: 5px !important;
+    padding: 5px !important;
+    font-size: 11px !important;
+}
+
+.skill-document-selector {
+    width: 100%;
+    margin-top: 6px;
+}
+
+.document-selector-box {
+    width: 100%;
+    padding-top: 5px;
+    border-top: 1px solid #dddddd;
+}
+
+.document-selector-select {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 5px;
+    font-size: 11px;
+}
+
+.document-selector-box button {
+    font-size: 11px;
+    padding: 3px 5px;
+    margin: 2px;
+}
+
+.document-selector-loading,
+.document-selector-empty {
+    padding: 5px 0;
+    font-size: 11px;
+}
+.certificate-document-selector {
+    width: 100%;
+    margin-top: 6px;
+}
+.resume-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: #f5f6f8;
+}
+
+.resume-container {
+    width: min(900px, 100%);
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.resume-header {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 40px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.resume-avatar-wrapper {
+    flex-shrink: 0;
+}
+
+.resume-avatar,
+.resume-avatar-placeholder {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.resume-avatar {
+    object-fit: cover;
+}
+
+.resume-avatar-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5e7eb;
+    font-weight: 700;
+}
+
+.resume-header-info h1 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+}
+
+.resume-header-info p {
+    margin: 5px 0;
+}
+
+.resume-section {
+    padding: 32px 40px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.resume-section:last-child {
+    border-bottom: none;
+}
+
+.resume-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.resume-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 28px;
+}
+
+.resume-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.resume-info-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    opacity: 0.65;
+}
+
+.resume-info-value {
+    font-size: 1rem;
+}
+
+.resume-list {
+    display: grid;
+    gap: 16px;
+}
+
+.resume-card {
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.resume-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.resume-detail {
+    margin: 7px 0;
+}
+
+.resume-documents {
+    margin-top: 16px;
+}
+
+.resume-document-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.resume-document-link {
+    display: inline-block;
+    padding: 7px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.resume-document-link:hover {
+    background: #f3f4f6;
+}
+
+.resume-status,
+.resume-empty {
+    text-align: center;
+}
+
+.resume-status {
+    padding: 50px 20px;
+}
+
+@media (max-width: 650px) {
+    .resume-page {
+        padding: 0;
+    }
+
+    .resume-container {
+        border-radius: 0;
+    }
+
+    .resume-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .resume-section {
+        padding: 26px 20px;
+    }
+
+    .resume-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================
+   Reviewer
+   ========================= */
+
+.reviewer-submission-grid th:nth-child(1),
+.reviewer-submission-grid td:nth-child(1) {
+    width: 15%;
+}
+
+.reviewer-submission-grid th:nth-child(2),
+.reviewer-submission-grid td:nth-child(2) {
+    width: 55%;
+}
+
+.reviewer-submission-grid th:nth-child(3),
+.reviewer-submission-grid td:nth-child(3) {
+    width: 30%;
+}
+
+.resume-owner-controls {
+    width: min(900px, 100%);
+    margin: 0 auto 15px auto;
+}
+
+.resume-owner-controls button {
+    padding: 10px 16px;
+    cursor: pointer;
+}
+.account-deletion { border: 1px solid #c53030; padding: 20px; margin-top: 24px; }
+.account-deletion h2 { color: #a82323; }
+.account-deletion label { display: block; margin-top: 12px; }
+.account-deletion input { display: block; width: min(100%, 360px); box-sizing: border-box; margin: 8px 0; }
+#deleteAccountButton { background: #b42323; color: white; margin-top: 12px; }
+#deleteAccountButton:disabled { opacity: 0.6; cursor: wait; }

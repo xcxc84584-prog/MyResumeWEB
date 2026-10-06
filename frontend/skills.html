@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技能與證照 | ResumeSystem</title>
+    <link rel="stylesheet" href="/static/css/style.css?v=9">
+</head>
+<body>
+    <header>
+        <h1>ResumeSystem</h1>
+        <p>技能與證照</p>
+    </header>
+
+    <main>
+        <section>
+            <h2 id="formTitle">新增技能</h2>
+
+            <form id="skillForm">
+                <div>
+                    <label for="skillName">技能名稱 *</label>
+                    <input
+                        type="text"
+                        id="skillName"
+                        name="skillName"
+                        maxlength="100"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="learningDuration">學習時長 *</label>
+                    <select
+                        id="learningDuration"
+                        name="learningDuration"
+                        required
+                    >
+                        <option value="">請選擇</option>
+                        <option value="less_than_30_days">小於 30 天</option>
+                        <option value="one_month">一個月</option>
+                        <option value="three_months">三個月</option>
+                        <option value="six_months">半年</option>
+                        <option value="over_one_year">一年以上</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="proficiencyLevel">學習程度 *</label>
+                    <select
+                        id="proficiencyLevel"
+                        name="proficiencyLevel"
+                        required
+                    >
+                        <option value="">請選擇</option>
+                        <option value="beginner">初階</option>
+                        <option value="intermediate">中階</option>
+                        <option value="advanced">高階</option>
+                    </select>
+                </div>
+
+                <button
+                    type="submit"
+                    id="saveButton"
+                >
+                    新增技能
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelEditButton"
+                    hidden
+                >
+                    取消編輯
+                </button>
+            </form>
+
+            <p id="message"></p>
+        </section>
+
+        <section>
+            <h2>我的技能</h2>
+
+            <div class="table-container">
+                <table class="data-grid skill-grid">
+                    <thead>
+                        <tr>
+                            <th>技能名稱</th>
+                            <th>學習時長</th>
+                            <th>學習程度</th>
+                            <th>證明文件</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="skillList">
+                        <tr>
+                            <td colspan="5">
+                                正在讀取技能資料...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2 id="certificateFormTitle">新增證照</h2>
+
+            <form id="certificateForm">
+                <div>
+                    <label for="certificateName">證照名稱 *</label>
+                    <input
+                        type="text"
+                        id="certificateName"
+                        name="certificateName"
+                        maxlength="200"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="certificateIssuer">發證單位</label>
+                    <input
+                        type="text"
+                        id="certificateIssuer"
+                        name="certificateIssuer"
+                        maxlength="200"
+                    >
+                </div>
+
+                <div>
+                    <label for="certificateIssueDate">取得日期</label>
+                    <input
+                        type="date"
+                        id="certificateIssueDate"
+                        name="certificateIssueDate"
+                    >
+                </div>
+
+                <div>
+                    <label for="certificateExpirationDate">有效期限</label>
+                    <input
+                        type="date"
+                        id="certificateExpirationDate"
+                        name="certificateExpirationDate"
+                    >
+                </div>
+
+                <div>
+                    <label for="certificateNumber">證照編號</label>
+                    <input
+                        type="text"
+                        id="certificateNumber"
+                        name="certificateNumber"
+                        maxlength="100"
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    id="certificateSaveButton"
+                >
+                    新增證照
+                </button>
+
+                <button
+                    type="button"
+                    id="certificateCancelEditButton"
+                    hidden
+                >
+                    取消編輯
+                </button>
+            </form>
+
+            <p id="certificateMessage"></p>
+        </section>
+
+        <section>
+            <h2>我的證照</h2>
+
+            <div class="table-container">
+                <table class="data-grid certificate-grid">
+                    <thead>
+                        <tr>
+                            <th>證照名稱</th>
+                            <th>發證單位</th>
+                            <th>取得日期</th>
+                            <th>有效期限</th>
+                            <th>證照編號</th>
+                            <th>證明文件</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="certificateList">
+                        <tr>
+                            <td colspan="7">
+                                正在讀取證照資料...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <p>
+            <a href="/dashboard">返回使用者中心</a>
+        </p>
+    </main>
+
+    <script src="/static/js/skills.js"></script>
+    <script src="/static/js/certificates.js?v=2"></script>
+</body>
+</html>

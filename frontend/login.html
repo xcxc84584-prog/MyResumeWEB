@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入 | ResumeSystem</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ResumeSystem</h1>
+        <p>登入</p>
+    </header>
+
+    <main>
+        <form id="loginForm">
+            <div>
+                <label for="username">帳號</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    minlength="3"
+                    maxlength="50"
+                    required
+                    autocomplete="username"
+                >
+            </div>
+
+            <div>
+                <label for="password">密碼</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    maxlength="128"
+                    placeholder="查閱模式可留空"
+                    autocomplete="current-password"
+                >
+            </div>
+
+            <button type="submit">登入</button>
+        </form>
+
+        <p id="loginHint">
+            一般登入請輸入帳戶密碼；若帳戶已開啟查閱模式，可將密碼留空進入唯讀履歷。
+        </p>
+
+        <p id="message"></p>
+
+        <p>
+            還沒有帳號？
+            <a href="/register">建立帳號</a>
+        </p>
+
+        <p>
+            <a href="/">返回首頁</a>
+        </p>
+    </main>
+
+    <script src="/static/js/login.js"></script>
+</body>
+</html>

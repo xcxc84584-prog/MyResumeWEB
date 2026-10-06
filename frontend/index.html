@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeSystem</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ResumeSystem</h1>
+        <p>線上履歷管理系統</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>歡迎使用 ResumeSystem</h2>
+            <p>建立、管理、提交與批閱履歷。</p>
+        </section>
+
+        <section>
+            <h2>一般帳號</h2>
+            <button id="registerButton">建立帳號</button>
+            <button id="loginButton">登入</button>
+        </section>
+
+        <section>
+            <h2>批閱功能</h2>
+            <button
+                type="button"
+                onclick="window.location.href='/reviewer'"
+            >
+                批閱模式
+            </button>
+        </section>
+
+        <section>
+            <h2>帳號管理</h2>
+            <button
+                type="button"
+                onclick="window.location.href='/delete-account'"
+            >
+                註銷帳號
+            </button>
+        </section>
+    </main>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

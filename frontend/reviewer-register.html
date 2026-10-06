@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊批閱帳號 | ResumeSystem</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ResumeSystem</h1>
+        <p>註冊批閱帳號</p>
+    </header>
+
+    <main>
+        <form id="reviewerRegisterForm">
+            <div>
+                <label for="companyName">公司名稱</label>
+                <input
+                    type="text"
+                    id="companyName"
+                    maxlength="200"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="description">描述</label>
+                <textarea
+                    id="description"
+                    maxlength="500"
+                    rows="4"
+                    required
+                ></textarea>
+            </div>
+
+            <div>
+                <label for="password">密碼</label>
+                <input
+                    type="password"
+                    id="password"
+                    minlength="8"
+                    maxlength="128"
+                    required
+                    autocomplete="new-password"
+                >
+            </div>
+
+            <button type="submit">註冊批閱帳號</button>
+        </form>
+
+        <p id="message"></p>
+
+        <p>
+            <a href="/reviewer/login">已有帳號？登入</a>
+        </p>
+
+        <p>
+            <a href="/reviewer">返回批閱模式</a>
+        </p>
+    </main>
+
+    <script src="/static/js/reviewer-register.js"></script>
+</body>
+</html>
